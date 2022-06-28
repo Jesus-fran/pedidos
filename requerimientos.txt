@@ -1,0 +1,20 @@
+
+
+## REQUISITOS ###
+
+1. Formulario de registro:
+	- nombre completo
+	- email
+	- telefono
+	- dirección de envio (calle, numero, colonia, ciudad, municipio, estado,  CP).
+	- Botón "calcular envío".
+	
+2. Mostrar costo de envío	
+
+
+AIzaSyDKlAiXYpfK-JJtQfKWXBImlIG5n4gPR6A
+
+
+clave de api
+
+AIzaSyC1013AP-y0F2d8zZtwDRbsFVVr7aMbblU
