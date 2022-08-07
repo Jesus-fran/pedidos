@@ -56,10 +56,13 @@
                                     <label for="validationCustomUsername" class="form-label">Nombre completo</label>
                                     <div class="input-group">
 
-                                        <input type="text" name="name" class="form-control" id="validationCustomUsername"
+                                        <input type="text" name="name"  value="{{ old('name') }}" class="form-control" id="validationCustomUsername"
                                             aria-describedby="inputGroupPrepend" required>
-                                        <div class="invalid-feedback">
-                                            Porfavor ingrese su nombre completo
+                                        <div class="invalid-feedback d-block">
+                                            @error('name')
+                                                Porfavor ingrese su nombre completo <br>
+                                                {{'('.$message.')'}}
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -67,10 +70,14 @@
                                     <label for="validationCustomUsername" class="form-label">Correo electrónico</label>
                                     <div class="input-group">
 
-                                        <input type="email" name="email" class="form-control"
+                                        <input type="email" name="email"  value="{{ old('email') }}" class="form-control"
                                             id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                                        <div class="invalid-feedback">
-                                            Ingrese un correo válido
+                                        <div class="invalid-feedback d-block">
+                                            
+                                            @error('email')
+                                                Ingrese un correo válido <br>
+                                                {{'('.$message.')'}}
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -78,10 +85,14 @@
                                     <label for="validationCustomUsername" class="form-label">Telefono</label>
                                     <div class="input-group">
 
-                                        <input type="text" name="tel" class="form-control" id="validationCustomUsername"
+                                        <input type="text" name="tel"  value="{{ old('tel') }}" class="form-control" id="validationCustomUsername"
                                             aria-describedby="inputGroupPrepend" required>
-                                        <div class="invalid-feedback">
-                                            Ingrese un número de telefono valido
+                                        <div class="invalid-feedback d-block">
+                                            
+                                            @error('tel')
+                                                Ingrese un número de telefono valido <br>
+                                                {{'('.$message.')'}}
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -95,55 +106,80 @@
 
                                 <div class="col-md-3">
                                     <label for="validationCustom03" class="form-label">Estado</label>
-                                    <input type="text" name="estado" class="form-control" id="validationCustom03"
+                                    <input type="text" name="estado"  value="{{ old('estado') }}" class="form-control" id="validationCustom03"
                                         required>
-                                    <div class="invalid-feedback">
-                                        Porfavor ingrese su estado
+                                    <div class="invalid-feedback d-block">
+                                        
+                                        @error('estado')
+                                            Porfavor ingrese su estado <br>
+                                            {{'('.$message.')'}}
+                                        @enderror
                                     </div>
                                 </div>
 
                                 <div class="col-md-3">
                                     <label for="validationCustom03" class="form-label">Municipio</label>
-                                    <input type="text" name="municipio" class="form-control" id="validationCustom03" required>
-                                    <div class="invalid-feedback">
-                                        Porfavor ingrese su municipio
+                                    <input type="text" name="municipio"  value="{{ old('municipio') }}" class="form-control" id="validationCustom03" required>
+                                    <div class="invalid-feedback d-block">
+                                        
+                                        @error('municipio')
+                                            Porfavor ingrese su municipio <br>
+                                            {{'('.$message.')'}}
+                                        @enderror
                                     </div>
                                 </div>
 
 
                                 <div class="col-md-3">
                                     <label for="validationCustom03" class="form-label">Código postal</label>
-                                    <input type="number" name="cp" class="form-control" id="validationCustom03" required>
-                                    <div class="invalid-feedback">
-                                        Porfavor ingrese su código postal
+                                    <input type="number" name="cp"  value="{{ old('cp') }}" class="form-control" id="validationCustom03" required>
+                                    <div class="invalid-feedback d-block">
+                                       
+                                        @error('cp')
+                                        Porfavor ingrese su código postal <br>
+                                        {{'('.$message.')'}}
+                                        @enderror
                                     </div>
                                 </div>
 
                                 <div class="col-md-3">
                                     <label for="validationCustom03" class="form-label">Colonia</label>
-                                    <input type="text" name="colonia" class="form-control" id="validationCustom03"
+                                    <input type="text" name="colonia"  value="{{ old('colonia') }}" class="form-control" id="validationCustom03"
                                         required>
-                                    <div class="invalid-feedback">
-                                        Porfavor ingrese su colonia
+                                    <div class="invalid-feedback d-block">
+                                        
+                                        @error('colonia')
+                                            Porfavor ingrese su colonia <br>
+                                            {{'('.$message.')'}}
+                                        @enderror
                                     </div>
                                 </div>
 
                                 <div class="col-md-3">
                                     <label for="validationCustom03" class="form-label">Calle</label>
-                                    <input type="text" name="calle" class="form-control" id="validationCustom03" required>
-                                    <div class="invalid-feedback">
-                                        Porfavor ingrese una calle
+                                    <input type="text" name="calle"  value="{{ old('calle') }}" class="form-control" id="validationCustom03" required>
+                                    <div class="invalid-feedback d-block">
+                                        
+                                        @error('calle')
+                                            Porfavor ingrese una calle <br>
+                                            {{'('.$message.')'}}
+                                        @enderror
                                     </div>
                                 </div>
                                 
-                                <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="terminos" type="checkbox" value="false" id="invalidCheck" required>
-                                        <label class="form-check-label" for="invalidCheck">
-                                            Aceptar los terminos y condiciones
-                                        </label>
-                                        <div class="invalid-feedback">
-                                            Primero acepte los términos
+                                <div class="row">
+                                    <div class="col-md-4 offset-md-5 col-sm-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="terminos" type="checkbox" value="1" id="invalidCheck" required>
+                                            <label class="form-check-label" for="invalidCheck">
+                                                Aceptar los terminos y condiciones
+                                            </label>
+                                            <div class="invalid-feedback d-block">
+                                               
+                                                @error('terminos')
+                                                {{'('.$message.')'}}
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

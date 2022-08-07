@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FormValidation;
 use Illuminate\Http\Request;
 
 class CalcularEnvio extends Controller
 {
-    public function Calcular(Request $request)
+    public function Calcular(FormValidation $request)
     {
         $nombre = $request->name;
         $email  = $request->email;

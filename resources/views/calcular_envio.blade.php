@@ -20,14 +20,14 @@
         </div>
         
         <div class="row gy-3">
-            <div class="col-6 text-center">
+            <div class="col-md-6 col-sm-12 text-center">
                 <h6>Datos de envío del pedido</h6>
             </div>
-            <div class="col-6 text-center">
+            <div class="col-md-6 text-center d-none d-sm-block d-md-block">
                 <h6>Costo de envío hasta el lugar de destino</h6>
             </div>
         </div>
-        <div class="col-5 offset-1 gy-3">
+        <div class="col-sm-12 col-md-5 offset-md-1 gy-3">
             <div class="card">
                 <div class="card-body">
                     <div class="col">
@@ -65,7 +65,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-5 offset-1 gy-3">
+        <div class="col-sm-12 text-center d-sm-block d-md-none gy-3">
+            <h6>Costo de envío hasta el lugar de destino</h6>
+        </div>
+        <div class="col-sm-12 col-md-5 offset-md-1 gy-3">
             <div class="card">
                 <div class="card-body">
                     <div class="col text-center">
