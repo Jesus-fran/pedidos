@@ -50,8 +50,8 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <form class="row g-3 needs-validation" action="{{ route('calcular-envio') }}">
-
+                            <form class="row g-3 needs-validation" action="{{ route('calcular-envio') }}" method="POST">
+                                @csrf
                                 <div class="col-md-6">
                                     <label for="validationCustomUsername" class="form-label">Nombre completo</label>
                                     <div class="input-group">

@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('calcular-envio', [CalcularEnvio::class, 'Calcular'])->name('calcular-envio');
+Route::post('calcular-envio', [CalcularEnvio::class, 'Calcular'])->name('calcular-envio');

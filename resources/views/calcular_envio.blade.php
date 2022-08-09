@@ -72,19 +72,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="col text-center">
-                        @if ($distancia_value / 1000 <= 100)
-                            <p><strong>Precio: </strong> $100.00 MX</p>
-                        @elseif ($distancia_value / 1000 <= 200)
-                            <p><strong>Precio: </strong> $130.00 MX</p>
-                        @elseif ($distancia_value / 1000 <= 400)
-                            <p><strong>Precio: </strong> $170.00 MX</p>
-                        @elseif ($distancia_value / 1000 <= 700)
-                            <p><strong>Precio: </strong> $210.00 MX</p>
-                        @elseif ($distancia_value / 1000 <= 1000)
-                            <p><strong>Precio: </strong> $250.00 MX</p>
-                        @elseif ($distancia_value / 1000 > 1000)
-                            <p><strong>Precio: </strong> $350.00 MX</p>
-                        @endif
+                        {{'$'.$costo_distancia.'.00 MX'}}
                     </div>
                 </div>
             </div>
