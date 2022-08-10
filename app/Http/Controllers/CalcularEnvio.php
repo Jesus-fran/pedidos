@@ -70,8 +70,8 @@ class CalcularEnvio extends Controller
         $lat_dest = $geo_arr->results[0]->geometry->location->lat;
         $long_dest = $geo_arr->results[0]->geometry->location->lng;
 
-        return compact('nombre', 'email', 'tel', 'status', 'encontrado', 'distancia', 'costo_por_distancia');
-        // return view('calcular_envio', compact('nombre', 'email', 'tel', 'status', 'encontrado', 'distancia', 'costo_distancia', 'duracion', 'destino_dir', 'origen_dir', 'long_dest', 'lat_dest'));
+        //return compact('nombre', 'email', 'tel', 'status', 'encontrado', 'distancia', 'costo_distancia');
+        return view('calcular_envio', compact('nombre', 'email', 'tel', 'status', 'encontrado', 'distancia', 'costo_distancia', 'duracion', 'destino_dir', 'origen_dir', 'long_dest', 'lat_dest'));
     }
 
 }
