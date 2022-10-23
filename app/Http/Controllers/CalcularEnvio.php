@@ -68,6 +68,7 @@ class CalcularEnvio extends Controller
         $origen_dir = $distancia_arr->origin_addresses[0];
         $geo = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($destino).'&key='.$api_key);
         $geo_arr = json_decode($geo);
+        // return $geo_arr;
         $lat_dest = $geo_arr->results[0]->geometry->location->lat;
         $long_dest = $geo_arr->results[0]->geometry->location->lng;
 
