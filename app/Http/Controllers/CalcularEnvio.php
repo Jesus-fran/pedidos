@@ -50,10 +50,11 @@ class CalcularEnvio extends Controller
         $origen = '16.895863879627875,-92.06730387778236';
 
         $destino = $calle.', '.$colonia.', '.$cp.', '.$municipio.', '.$estado;
-        $api_key = 'AIzaSyC1013AP-y0F2d8zZtwDRbsFVVr7aMbblU';
+        // $api_key = 'AIzaSyC1013AP-y0F2d8zZtwDRbsFVVr7aMbblU';
+        $api_key = 'AIzaSyCS1WbkMD1gjkwW7umiiFDPIjQlvQTnQQs';
         $distance_data = file_get_contents ( 'https://maps.googleapis.com/maps/api/distancematrix/json?&origins='.$origen.'&destinations='.urlencode($destino).'&key='.$api_key);
         $distancia_arr = json_decode ( $distance_data ) ;
-
+        // return $distancia_arr;
         $status = $distancia_arr->status;
         $encontrado = $distancia_arr->rows[0]->elements[0]->status;
         $distancia = $distancia_arr->rows[0]->elements[0]->distance->text;
